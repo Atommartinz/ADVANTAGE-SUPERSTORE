@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM-SUPERMART - Your Everyday Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">ATM-SUPERMART</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to ATM-SUPERMART</h2>
+                <p>Fresh groceries delivered to your door. Shop now and save!</p>
+                <button onclick="document.getElementById('products').scrollIntoView();">Shop Now</button>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <h2>Featured Products</h2>
+            <div id="product-grid" class="product-grid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="cart" class="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ATM-SUPERMART. All rights reserved.</p>
+        <P>You can never be at disadvantage.</P>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
